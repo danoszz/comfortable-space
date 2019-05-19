@@ -20,7 +20,8 @@ const ButtonContainer = styled.button`
   &:focus {
     outline: none;
   }
-  &:hover, &.active {
+  &:hover,
+  &.active {
     border: 1px solid white;
   }
 `
@@ -47,7 +48,6 @@ const RecordDot = styled.div`
     mix-blend-mode: screen;
     filter: blur(1px);
     animation: ${aura} 20s infinite linear;
-
   }
   &:before {
     background-color: ${colors.magenta};
@@ -67,28 +67,13 @@ const RecordDot = styled.div`
   }
 `
 const RecordButton = ({ isListening, onClick }) => (
-  <ButtonContainer onClick={onClick} className={toggleClass(isListening, "active")}>
+  <ButtonContainer
+    onClick={onClick}
+    className={toggleClass(isListening, "active")}
+  >
     <RecordDot className={toggleClass(isListening, "inactive")} />
   </ButtonContainer>
 )
-
-// class RecordButton extends React.Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = { isListening: true }
-//   }
-
-//   render() {
-//     const { isListening } = this.props
-//     return (
-//       <ButtonContainer
-//         className={isListening ? "record-button" : "record-button active"}
-//       >
-//         <RecordDot className={isListening ? null : "active"} />
-//       </ButtonContainer>
-//     )
-//   }
-// }
 
 RecordButton.propTypes = {
   isListening: PropTypes.bool,
