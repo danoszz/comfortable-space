@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { colors, sizes } from "./variables"
+import { colors, sizes } from "../styles/variables"
 import styled from "styled-components"
-import Footer from "./footer"
-import { TypographyStyles } from "../styles/globalStyles"
+import Footer from "./Footer"
+import { TypographyStyles } from "../styles/global"
 
 const MainWrapper = styled.div`
   background-color: ${colors.black};
@@ -30,6 +30,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            repo
           }
         }
       }
@@ -40,7 +41,7 @@ const Layout = ({ children }) => (
         <MainWrapper>
           <MainContainer>{children}</MainContainer>
         </MainWrapper>
-        <Footer sourceURL={data.site.siteMetadata.title} />
+        <Footer sourceURL={data.site.siteMetadata.repo} />
       </>
     )}
   />

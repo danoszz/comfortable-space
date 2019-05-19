@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { sizes, colors } from "../components/variables"
+import { timings } from "../styles/variables"
 
 const ModalWrapper = styled.div`
   width: 100vw;
@@ -17,10 +17,11 @@ const ModalWrapper = styled.div`
   left: 0;
   right: 0;
   mix-blend-mode: exclusion;
-  transform: translateY(100vw);
-  transition: transform 1800ms cubic-bezier(0.86, 0, 0.07, 1);
+  transform: translateY(100%);
+  transition: transform 1200ms ${timings.smoothOne};
   pointer-events: none;
   &.open {
+    transition: transform 1200ms ${timings.smoothOne};
     transform: translateY(0);
   }
 `
