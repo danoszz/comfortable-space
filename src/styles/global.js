@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
-import { fontFiles, fontAmerigo, fontFormular } from "./fontFiles.js"
+import { colors } from "./variables"
+import { fontFiles, fontAmerigo, fontFormular } from "./fonts"
 import "./normalize.css"
 
 export const TypographyStyles = createGlobalStyle`
@@ -21,9 +22,9 @@ export const TypographyStyles = createGlobalStyle`
   font-family: 'Formular';
   src: url("${fontFiles.FormularRegularEOT}"), 
     url("${fontFiles.FormularRegularEOT}?#iefix") format('embedded-opentype'), 
-    url("${fontFiles.FormularRegularWOFF2}.woff2") format('woff2'), 
+    url("${fontFiles.FormularRegularWOFF2}") format('woff2'), 
     url(".${fontFiles.FormularRegularWOFF}") format('woff'), 
-    url("${fontFiles.FormularRegularTTF}.ttf") format('truetype'), 
+    url("${fontFiles.FormularRegularTTF}") format('truetype'), 
     url("${fontFiles.FormularRegularSVG}#Formular") format('svg');
   font-weight: normal;
   font-style: normal;
@@ -44,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   margin-bottom: 0;
+}
+
+h1 span, p span {
+  color: ${colors.green};
 }
 
 `
