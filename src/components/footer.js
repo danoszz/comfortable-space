@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { sizes, colors } from "../components/variables"
+import { sizes, colors } from "../styles/variables"
 
 const FooterWrapper = styled.footer`
   position: absolute;
@@ -17,7 +17,7 @@ const FooterWrapper = styled.footer`
 
 const Footer = ({ sourceURL }) => (
   <FooterWrapper>
-     Love to commit? <a href={sourceURL}>Check the source</a> © {new Date().getFullYear()},
+     <a href={sourceURL}>Check the source</a>
   </FooterWrapper>
 )
 
