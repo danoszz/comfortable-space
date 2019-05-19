@@ -1,6 +1,6 @@
 # Get comfortable 🛋
 
-React website developed to answer WeTransfer's unasked questions
+Answering Unasked Questions -- Voice UI implementation with React.js and Gastby
 
 ### Features
 
