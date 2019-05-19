@@ -1,6 +1,6 @@
 # Get comfortable 🛋
 
-Answering Unasked Questions -- Voice UI implementation with React.js and Gastby
+Answering Unasked Questions - Voice UI implementation with React.js and Gastby
 
 ### Features
 
