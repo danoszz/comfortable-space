@@ -13,6 +13,16 @@ const FooterWrapper = styled.footer`
   justify-content: flex-end;
   padding: 0 calc(${sizes.mainSize} / 2) calc(${sizes.mainSize} / 2) 0;
   color: ${colors.white};
+
+  a {
+    color: ${colors.green};
+    text-decoration: none;
+    opacity: 0.25;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 `
 
 const Footer = ({ sourceURL }) => (
