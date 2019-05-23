@@ -1,6 +1,12 @@
+![](https://manifesto-hoxa222vc.now.sh/logos/logo-192x192.png)
+
 # Get comfortable 🛋
 
-Answering Unasked Questions - Voice UI implementation with Web API SpeechRecognition, React.js and Gastby
+Answering Unasked Questions - Voice UI implementation with Web API SpeechRecognition, React.js and Gastby.
+
+```
+⚠️ Experimental and works in Chrome only
+```
 
 ## Features
 
