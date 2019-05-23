@@ -10,12 +10,12 @@ const FooterWrapper = styled.footer`
   left: 0;
   bottom: 0;
   display: flex;
-  justify-content: flex-end;
-  padding: 0 calc(${sizes.mainSize} / 2) calc(${sizes.mainSize} / 2) 0;
+  justify-content: space-between;
+  padding: 0 calc(${sizes.mainSize} / 2);
   color: ${colors.white};
 
-  a {
-    color: ${colors.green};
+  a,
+  p {
     text-decoration: none;
     opacity: 0.25;
 
@@ -23,11 +23,18 @@ const FooterWrapper = styled.footer`
       opacity: 1;
     }
   }
+  a {
+    color: ${colors.green};
+  }
 `
 
 const Footer = ({ sourceURL }) => (
   <FooterWrapper>
-     <a href={sourceURL}>Check the source</a>
+    <p>
+      Feeling stuck? Tell me to <span>restart</span>
+    </p>
+
+    <a href={sourceURL}>Check the source</a>
   </FooterWrapper>
 )
 
