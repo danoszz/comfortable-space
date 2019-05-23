@@ -143,7 +143,7 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Home" keywords={[`comfortable space`, `gatsby`, `voice UI`, 'daan van der Zwaag']} />
         <Title>{questions[userStep]}</Title>
         <Subtitle>{subtitles[userStep]}</Subtitle>
         <SpeechToText toggleModal={this.changeSteps} />
