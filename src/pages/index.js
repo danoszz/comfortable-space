@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import SpeechToText from "../components/SpeechToText"
 import Modal from "../components/Modal"
-
+import { sendEmail, openURL } from "../lib/helpers"
 import { sizes } from "../styles/variables"
 
 const Title = styled.h1`
@@ -15,26 +15,27 @@ const Title = styled.h1`
 `
 const Subtitle = styled.p`
   font-size: 4vw;
-  max-width: calc(${sizes.mainSize} * 18);
+  max-width: calc(${sizes.mainSize} * 16);
   margin-bottom: ${sizes.mainSize};
   line-height: 1.25;
 `
 
-// export const userSteps = {
-//   start: "start",
-//   yes: "yes",
-//   no: "no",
-//   goback: "back",
-//   getintouch: "touch",
-// }
+export const userSteps = {
+  start: "start",
+  yes: "yes",
+  no: "no",
+  goback: "back",
+  getintouch: "touch",
+}
 
 const questions = {
   start: <Fragment>Are you comfortable?</Fragment>,
   no: <Fragment>That's fine my friend</Fragment>,
-  yes: <Fragment>Teach me your tricks</Fragment>,
+  yes: <Fragment>Sharing is caring</Fragment>,
   goback: <Fragment>Back to the roots</Fragment>,
-  getintouch: <Fragment>Few seconds left</Fragment>,
-  undef: <Fragment>Ehhr, I am no AI</Fragment>,
+  getintouch: <Fragment>Popping up</Fragment>,
+  undef: <Fragment>Ehh, I am not an AI</Fragment>,
+  source: <Fragment>The room for improvement</Fragment>,
 }
 
 const subtitles = {
@@ -50,8 +51,7 @@ const subtitles = {
   ),
   yes: (
     <Fragment>
-      You never know when the computer is listening. We might want to{" "}
-      <span>talk</span> in real life.
+      Please teach me your tricks! Could you <span>get in touch </span> with me?
     </Fragment>
   ),
   getintouch: <Fragment>Email me everything you'd like to know</Fragment>,
@@ -63,7 +63,13 @@ const subtitles = {
   ),
   undef: (
     <Fragment>
-      Oops. I am not well trained yet. I'll <span>restart</span> for now.
+      I am not well trained yet. Let me <span>restart</span> for now.
+    </Fragment>
+  ),
+  source: (
+    <Fragment>
+      Commit and issue the hecko out of me. Or just <span>restart</span> for
+      now.
     </Fragment>
   ),
 }
@@ -78,6 +84,7 @@ class IndexPage extends React.Component {
   }
 
   // 🧟‍ TODO: Improve logic and nested steps, saving previous answers, optimize setState
+  // 🙄 NOTE: sloppy as hell, but it works for 0.1 release
 
   changeSteps = userAnswer => {
     console.log("userAnswer", userAnswer)
@@ -101,6 +108,7 @@ class IndexPage extends React.Component {
         openModal: !this.state.openModal,
         userAnswer: userAnswer,
       })
+      sendEmail("daan@devign.it", "🛋 Seeking comfort", "Let's work together, what shall we do?")
     } else if (userAnswer === "restart") {
       this.setState({
         openModal: !this.state.openModal,
@@ -111,11 +119,12 @@ class IndexPage extends React.Component {
         openModal: !this.state.openModal,
         userAnswer: "getintouch",
       })
-    } else if (userAnswer === " ") {
+    } else if (userAnswer === "source") {
       this.setState({
         openModal: !this.state.openModal,
-        userAnswer: "start",
+        userAnswer: "source",
       })
+      openURL("https://github.com/danoszz/comfortable-space")
     } else {
       this.setState({
         openModal: !this.state.openModal,

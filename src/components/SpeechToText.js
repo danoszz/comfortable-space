@@ -19,27 +19,11 @@ const InputWrapper = styled.div`
   margin: 0 auto;
 `
 
-const InputFieldCont = styled.div`
+const InputField = styled.div`
   flex: 1;
   height: 100%;
   display: flex;
   border-radius: ${sizes.borderRadius} 0 0 ${sizes.borderRadius};
-  color: ${colors.white};
-  background-color: ${colors.black};
-
-  flex-direction: row;
-  align-items: center;
-  padding: calc(${sizes.mainSize} / 2);
-
-  &.inactive {
-    color: ${colors.lightGrey};
-  }
-`
-
-const InputField = styled.input`
-  flex: 1;
-  height: 100%;
-  display: flex;
   color: ${colors.white};
   background-color: ${colors.black};
 
@@ -62,8 +46,6 @@ class SpeechToText extends React.Component {
     super(props)
     this.state = {
       userAnswer: "",
-      speechEnded: false,
-      setToGo: false,
     }
     this.setUserAnswer = this.setUserAnswer.bind(this)
     this.toggleSpeechEnded = this.toggleSpeechEnded.bind(this)
@@ -79,17 +61,11 @@ class SpeechToText extends React.Component {
     this.setState({
       userAnswer: answer,
     })
-    console.log("User Answer", this.state.userAnswer)
-    this.toggleSpeechEnded(true)
+
+    this.props.toggleModal(answer)
   }
 
-  // componentDidUpdate() {
-  //   if (this.state.speechEnded === true && this.setState.userAnswer !== "") {
-  //     this.setState({
-  //       setToGo: true,
-  //     })
-  //   }
-  // }
+  // 🤔 NOTE TO SELF: Move this complete component to parent. Issue now is regarding a fucking prop that won't move one level up from this child element to index.js
 
   render() {
     const setUserAnswer = this.setUserAnswer
@@ -117,42 +93,42 @@ class SpeechToText extends React.Component {
       alert("🐛 I'am sorry, please use Chrome to get started")
       return null
     } else if (this.props.listening === true) {
-      this.props.recognition.onspeechend = function() {
-        // remove capitals and spaces for better recognition
-        transcript = transcript.toLowerCase().replace(/\s/g, "")
-        // Force delay for animation
-        switch (transcript) {
-          case "yes":
+      if (transcript.length >= 1) {
+        this.props.recognition.onspeechend = function() {
+          function containsWord(value) {
+            // remove capitals and spaces for better recognition
+            transcript = transcript.toLowerCase().replace(/\s/g, "")
+            return transcript.includes(value)
+          }
+          // Very sloppy, promise I'll fix
+          if (containsWord("yes")) {
             setUserAnswer("yes")
-            break
-          case "no":
+          } else if (containsWord("no")) {
             setUserAnswer("no")
-            break
-          case "goback":
+          } else if (containsWord("back")) {
             setUserAnswer("goback")
-            break
-          case "touch" || "chat":
+          } else if (containsWord("touch")) {
             setUserAnswer("getintouch")
-            break
-          case "restart":
+          } else if (containsWord("restart")) {
             setUserAnswer("restart")
-            break
+          } else if (containsWord("source")) {
+            setUserAnswer("source")
+          } else {
+            setUserAnswer("undef")
+          }
         }
       }
     }
 
     return (
       <InputWrapper>
-        <InputFieldCont className={transcript ? null : "inactive"}>
+        <InputField className={transcript ? null : "inactive"}>
           {transcript ? transcript : "Click the record button and let me know"}
-        </InputFieldCont>
-        {/* <InputField disabled value={transcript} type="text" /> */}
-
+        </InputField>
         <RecordButton
           onClick={toggleListening}
           isListening={this.props.listening}
         />
-        <button onClick={() => this.props.toggleModal(this.state.userAnswer)} />
       </InputWrapper>
     )
   }
