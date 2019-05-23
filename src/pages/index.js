@@ -1,12 +1,12 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-import SpeechToText from "../components/SpeechToText"
-import Modal from "../components/Modal"
-import { sendEmail, openURL } from "../lib/helpers"
-import { sizes } from "../styles/variables"
+import Layout from "./../components/Layout"
+import SEO from "./../components/SEO"
+import SpeechToText from "./../components/SpeechToText"
+import Modal from "./../components/Modal"
+import { sendEmail, openURL } from ".././lib/helpers"
+import { sizes } from "./../styles/variables"
 
 const Title = styled.h1`
   font-size: 8vw;
