@@ -20,6 +20,7 @@ const ModalWrapper = styled.div`
   transform: translateY(100%);
   transition: transform 1200ms ${timings.smoothOne};
   pointer-events: none;
+  z-index: 100;
   &.open {
     transition: transform 1200ms ${timings.smoothOne};
     transform: translateY(0);
