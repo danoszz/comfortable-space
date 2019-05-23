@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Footer from "./Footer"
@@ -26,27 +25,13 @@ const MainContainer = styled.div`
 `
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            repo
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <TypographyStyles />
-        <MainWrapper>
-          <MainContainer>{children}</MainContainer>
-        </MainWrapper>
-        <Footer sourceURL={data.site.siteMetadata.repo} />
-      </>
-    )}
-  />
+  <>
+    <TypographyStyles />
+    <MainWrapper>
+      <MainContainer>{children}</MainContainer>
+    </MainWrapper>
+    <Footer sourceURL="https://github.com/danoszz/comfortable-space" />
+  </>
 )
 
 Layout.propTypes = {
