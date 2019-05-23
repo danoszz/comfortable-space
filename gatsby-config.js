@@ -3,7 +3,9 @@ module.exports = {
     title: `Comfortable Space`,
     description: `Answering Unasked Questions -- Voice UI implementation with React.js and Gastby`,
     author: `@danoszz`,
-    repo: `https://github.com/danoszz/comfortable-space`,
+  },
+  footerData: {
+    repo_url: `https://github.com/danoszz/comfortable-space`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
