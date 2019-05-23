@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+
 import { sizes, colors } from "../styles/variables"
 
 const FooterWrapper = styled.footer`

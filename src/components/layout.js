@@ -1,10 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { colors, sizes } from "../styles/variables"
 import styled from "styled-components"
+
 import Footer from "./Footer"
 import { TypographyStyles } from "../styles/global"
+import { colors, sizes } from "../styles/variables"
+
 
 const MainWrapper = styled.div`
   background-color: ${colors.black};

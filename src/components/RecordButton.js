@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+
 import { toggleClass } from "../lib/helpers"
 import { sizes, colors, timings } from "../styles/variables"
 import { pulse, aura } from "../styles/animations"
