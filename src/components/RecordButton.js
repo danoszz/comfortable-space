@@ -20,7 +20,9 @@ const ButtonContainer = styled.button`
   &:focus {
     outline: none;
   }
-  &:hover,
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1)
+  }
   &.active {
     border: 1px solid white;
   }
