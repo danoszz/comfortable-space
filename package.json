@@ -1,20 +1,20 @@
 {
   "name": "comfortable-space",
   "description": "Answering Unasked Questions -- Voice UI implementation with React.js and Gastby",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Daan van der Zwaag <daan@devign.it>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.5.5",
+    "gatsby": "^2.7.1",
     "gatsby-cli": "^2.6.2",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-emoji-favicon": "^1.2.0",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-plugin-sharp": "^2.1.0",
     "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-source-filesystem": "^2.0.36",
+    "gatsby-source-filesystem": "^2.0.37",
     "gatsby-transformer-sharp": "^2.1.19",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -24,7 +24,6 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "emoji-favicon-webpack-plugin": "^1.2.0",
     "prettier": "^1.17.1"
   },
   "keywords": [
