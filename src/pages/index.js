@@ -12,11 +12,12 @@ const Title = styled.h1`
   font-size: 8vw;
   max-width: calc(${sizes.mainSize} * 18);
   line-height: 1;
+  margin: 0 auto;
 `
 const Subtitle = styled.p`
-  font-size: 4vw;
-  max-width: calc(${sizes.mainSize} * 16);
-  margin-bottom: ${sizes.mainSize};
+  font-size: 3.5vw;
+  max-width: calc(${sizes.mainSize} * 18);
+  margin: calc(${sizes.mainSize} / 2) ${sizes.mainSize} ${sizes.mainSize} ${sizes.mainSize};
   line-height: 1.25;
 `
 
@@ -108,7 +109,11 @@ class IndexPage extends React.Component {
         openModal: !this.state.openModal,
         userAnswer: userAnswer,
       })
-      sendEmail("daan@devign.it", "🛋 Seeking comfort", "Let's work together, what shall we do?")
+      sendEmail(
+        "daan@devign.it",
+        "🛋 Seeking comfort",
+        "Let's work together, what shall we do?"
+      )
     } else if (userAnswer === "restart") {
       this.setState({
         openModal: !this.state.openModal,
