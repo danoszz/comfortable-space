@@ -73,9 +73,6 @@ class SpeechToText extends React.Component {
 
     let transcript = this.props.transcript
 
-    // Set language to US English
-    this.props.recognition.lang = "en-US"
-
     const toggleListening = () => {
       if (this.props.listening === true) {
         this.props.stopListening()
@@ -90,11 +87,11 @@ class SpeechToText extends React.Component {
 
     // Give alert to non-supported Browsers :(
     if (!this.props.browserSupportsSpeechRecognition) {
-      alert("🐛 I'am sorry, please use Chrome to get started")
       return null
     } else if (this.props.listening === true) {
       if (transcript.length >= 1) {
         this.props.recognition.onspeechend = function() {
+
           function containsWord(value) {
             // remove capitals and spaces for better recognition
             transcript = transcript.toLowerCase().replace(/\s/g, "")
