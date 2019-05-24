@@ -1,10 +1,10 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import SpeechToText from "../components/speechrecognition"
-import Modal from "../components/modal"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import SpeechToText from "../components/SpeechRecognition"
+import Modal from "../components/Modal"
 import { sendEmail, openURL } from ".././lib/helpers"
 import { sizes } from "./../styles/variables"
 
@@ -17,7 +17,8 @@ const Title = styled.h1`
 const Subtitle = styled.p`
   font-size: 3.5vw;
   max-width: calc(${sizes.mainSize} * 18);
-  margin: calc(${sizes.mainSize} / 2) ${sizes.mainSize} ${sizes.mainSize} ${sizes.mainSize};
+  margin: calc(${sizes.mainSize} / 2) ${sizes.mainSize} ${sizes.mainSize}
+    ${sizes.mainSize};
   line-height: 1.25;
 `
 
@@ -143,7 +144,15 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title="Home" keywords={[`comfortable space`, `gatsby`, `voice UI`, 'daan van der Zwaag']} />
+        <SEO
+          title="Home"
+          keywords={[
+            `comfortable space`,
+            `gatsby`,
+            `voice UI`,
+            "daan van der Zwaag",
+          ]}
+        />
         <Title>{questions[userStep]}</Title>
         <Subtitle>{subtitles[userStep]}</Subtitle>
         <SpeechToText toggleModal={this.changeSteps} />
