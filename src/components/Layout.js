@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Footer from "./Footer"
+import Footer from "./footer"
 import { TypographyStyles } from "../styles/global"
 import { colors, sizes } from "../styles/variables"
 
