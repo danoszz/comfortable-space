@@ -3,7 +3,7 @@ import React from "react"
 import SpeechRecognition from "react-speech-recognition"
 import styled from "styled-components"
 
-import RecordButton from "./recordbutton"
+import RecordButton from "./recordButton"
 
 import { colors, sizes } from "../styles/variables"
 

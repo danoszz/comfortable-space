@@ -1,10 +1,10 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-import SpeechToText from "../components/SpeechRecognition"
-import Modal from "../components/Modal"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import SpeechToText from "../components/speechRecognition"
+import Modal from "../components/modal"
 import { sendEmail, openURL } from ".././lib/helpers"
 import { sizes } from "./../styles/variables"
 
