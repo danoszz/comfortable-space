@@ -143,21 +143,23 @@ class IndexPage extends React.Component {
     let userStep = this.state.userAnswer
 
     return (
-      <Layout>
-        <SEO
-          title="Home"
-          keywords={[
-            `comfortable space`,
-            `gatsby`,
-            `voice UI`,
-            "daan van der Zwaag",
-          ]}
-        />
-        <Title>{questions[userStep]}</Title>
-        <Subtitle>{subtitles[userStep]}</Subtitle>
-        <SpeechToText toggleModal={this.changeSteps} />
+      <>
+        <Layout>
+          <SEO
+            title="Home"
+            keywords={[
+              `comfortable space`,
+              `gatsby`,
+              `voice UI`,
+              "daan van der Zwaag",
+            ]}
+          />
+          <Title>{questions[userStep]}</Title>
+          <Subtitle>{subtitles[userStep]}</Subtitle>
+          <SpeechToText toggleModal={this.changeSteps} />
+        </Layout>
         <Modal isModalOpen={!this.state.openModal} />
-      </Layout>
+      </>
     )
   }
 }
