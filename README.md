@@ -1,16 +1,14 @@
 ![](https://manifesto-hoxa222vc.now.sh/logos/logo-192x192.png)
 
-# Get comfortable 🛋
+# Comfortable Space 🛋
 
-Answering Unasked Questions - Voice UI implementation with Web API SpeechRecognition, React.js and Gastby.
+Answering Unasked Questions - Voice UI implementation with Web API SpeechRecognition, React.js and Gastby. 
 
-```
-⚠️ Experimental and works in Chrome only
+``` markdown
+⚠️ Experimental and works in Chrome only. Just for fun.
 ```
 
 ## Features
-
-Packages and tools used to come this far
 
 - [Gatsby](https://www.gatsbyjs.org/)
 - [Styled Components](https://www.styled-components.com)
@@ -36,9 +34,8 @@ After you open up your favorite CLI. My tool of choice is [Hyper](https://hyper.
 ### 🏗 Build and production
 
 - Manual deployment is done by `gatsby build` and uploading the files in the `/build` folder in your webserver.
-
 - This project is deployed by [Netlify](https://app.netlify.com/). Signup for the services and severless deploy with `git push`.
 
-### WIP & MIT
+## License and status
 
 The repo and files are WIP. Let me know if you find improvements, because there are many. Open a ticket or even PR. And as always; MIT license.
