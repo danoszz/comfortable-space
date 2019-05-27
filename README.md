@@ -1,4 +1,4 @@
-![](https://manifesto-hoxa222vc.now.sh/logos/logo-192x192.png)
+![](https://comfortable-space.netlify.com/static/screenshot.png)
 
 # Comfortable Space 🛋
 
