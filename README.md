@@ -2,13 +2,13 @@
 
 # Comfortable Space 🛋
 
-Answering Unasked Questions - Voice UI implementation with Web API SpeechRecognition, React.js and Gastby. 
+Answering Unasked Questions - Voice UI implementation with Web API SpeechRecognition, React.js and Gastby.
 
-``` markdown
+```markdown
 ⚠️ Experimental and works in Chrome only. Just for fun.
 ```
 
-## Features
+## 📦 Features
 
 - [Gatsby](https://www.gatsbyjs.org/)
 - [Styled Components](https://www.styled-components.com)
@@ -17,7 +17,7 @@ Answering Unasked Questions - Voice UI implementation with Web API SpeechRecogni
 
 ## 🚀 Getting Started
 
-First of all intall the following, got this already? Skip to ** Run locally **
+First of all intall the following, got this already? Skip to **Run locally**
 
 - [Node.js](https://nodejs.org/en/)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
@@ -25,7 +25,7 @@ First of all intall the following, got this already? Skip to ** Run locally **
 
 ### 🏃‍♂️ Local development
 
-After you open up your favorite CLI. My tool of choice is [Hyper](https://hyper.is/)/
+After you open up your favorite CLI. My tool of choice is [Hyper](https://hyper.is/).
 
 - `gatsby new accept-uncertainty git@github.com:danoszz/comfortable-space.git`
 - `cd accept-uncertainty`
