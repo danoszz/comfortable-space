@@ -1,4 +1,4 @@
-![](https://comfortable-space.netlify.com/static/screenshot.png)
+![](https://comfortable-space.netlify.com/screenshot.png)
 
 # Comfortable Space 🛋
 
