@@ -5,7 +5,7 @@
   "author": "Daan van der Zwaag <daan@devign.it>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.7.1",
+    "gatsby": "^2.32.13",
     "gatsby-cli": "^2.6.2",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-emoji-favicon": "^1.2.0",
